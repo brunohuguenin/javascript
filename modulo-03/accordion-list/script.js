@@ -1,3 +1,4 @@
+// -------- Navegação por Tabs ---------
 const initTabNav = () => {
   const tabMenu = document.querySelectorAll('.js-tabmenu li');
   const tabContent = document.querySelectorAll('.js-tabcontent section');
@@ -22,6 +23,7 @@ const initTabNav = () => {
 };
 initTabNav();
 
+// -------- Accordion ---------
 const initAccordion = () => {
   const accordionList = document.querySelectorAll('.js-accordion dt');
   const activClass = 'ativo';
