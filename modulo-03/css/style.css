@@ -216,6 +216,7 @@ body {
   }
 }
 
+ /* ----- navegação por tabs ------- */
 .js-tabcontent section {
   display: none;
 }
@@ -236,6 +237,7 @@ body {
   }
 }
 
+/* ------- accordion -------- */
 .js .js-accordion dd {
   display: none;
 }
