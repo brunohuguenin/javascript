@@ -27,3 +27,30 @@ transacao1.slice(-4); // ente
 transacao1.slice(3, 6); // ósi
 
 console.log(listaFrutas.lastIndexOf('j'));
+
+const listaPrecos = ['R$ 99', 'R$ 199', 'R$ 12000'];
+
+listaPrecos.forEach((preco) => {
+  console.log(preco.padStart(10, '.'));
+});
+
+listaPrecos[0].padStart(10, '.'); // .....R$ 99
+listaPrecos[0].padEnd(10, '.'); // R$ 99.....
+
+const repete = 'valeu, natalina ';
+console.log(repete.repeat(3));
+
+let listaItens = 'Camisas Bonés Calças Bermudas Vestidos Saias';
+listaItens = listaItens.replace(/[ ]+/g, ', ');
+
+let preco = 'R$ 1200,43';
+preco = preco.replace(',', '.'); // 'R$ 1200.43'
+
+const listaItens2 = 'Camisas Bonés Calças Bermudas Vestidos Saias';
+const arrayItens = listaItens2.split(' ');
+
+const htmlText = '<div>O melhor item</div><div>A melhor lista</div>';
+//const htmlArray = htmlText.split('div');
+//const htmlNovo = htmlArray.join('section');
+
+const altera = htmlText.split('div').join('section');
