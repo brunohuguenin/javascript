@@ -1,7 +1,7 @@
 // -------- Navegação por Tabs ---------
 const initTabNav = () => {
-  const tabMenu = document.querySelectorAll('.js-tabmenu li');
-  const tabContent = document.querySelectorAll('.js-tabcontent section');
+  const tabMenu = document.querySelectorAll('[data-tab="menu"] li');
+  const tabContent = document.querySelectorAll('[data-tab="content"] section');
 
   if (tabMenu.length && tabContent.length) {
     tabContent[0].classList.add('ativo');
@@ -11,7 +11,8 @@ const initTabNav = () => {
         section.classList.remove('ativo');
       });
 
-      tabContent[index].classList.add('ativo');
+      const direcao = tabContent[index].dataset.anime;
+      tabContent[index].classList.add('ativo', direcao);
     };
 
     tabMenu.forEach((item, index) => {
@@ -25,7 +26,9 @@ initTabNav();
 
 // -------- Accordion ---------
 const initAccordion = () => {
-  const accordionList = document.querySelectorAll('.js-accordion dt');
+  const accordionList = document.querySelectorAll(
+    '[data-anime="accordion"] dt',
+  );
   const activClass = 'ativo';
 
   if (accordionList.length) {
@@ -33,7 +36,7 @@ const initAccordion = () => {
     accordionList[0].nextElementSibling.classList.add(activClass);
 
     const activAccordion = (event) => {
-      event.currentTarget.classList.toggle('activClass');
+      event.currentTarget.classList.toggle(activClass);
       event.currentTarget.nextElementSibling.classList.toggle(activClass);
     };
 
@@ -47,7 +50,9 @@ initAccordion();
 
 // ------- scroll suave ----------
 const initScrollSuave = () => {
-  const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+  const linksInternos = document.querySelectorAll(
+    '[data-menu="suave"] a[href^="#"]',
+  );
 
   const scrollToSection = (event) => {
     event.preventDefault();
@@ -69,7 +74,7 @@ initScrollSuave();
 
 // ------ Animação ao Scroll ---------
 const initAnimacaoScroll = () => {
-  const sections = document.querySelectorAll('.js-scroll');
+  const sections = document.querySelectorAll('[data-anime="scroll"]');
   if (sections.length) {
     const windowMetade = window.innerHeight * 0.5;
 
