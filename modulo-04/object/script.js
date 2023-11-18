@@ -1,79 +1,98 @@
-// const pessoa = new Object({
-//   nome: 'Bruno',
-//   idade: 25,
+// // const pessoa = new Object({
+// //   nome: 'Bruno',
+// //   idade: 25,
+// // });
+
+// // const carro = {
+// //   rodas: 4,
+// //   init(marca) {
+// //     this.marca = marca;
+// //     return this;
+// //   },
+// //   acelerar() {
+// //     return `${this.marca} acelerou as ${this.rodas} rodas`;
+// //   },
+// //   buzinar() {
+// //     return this.marca + ' buzinou';
+// //   },
+// // };
+
+// // const honda = Object.create(carro).init('Honda');
+
+// // const ferrari = Object.create(carro).init('Ferrari');
+// // console.log(ferrari.acelerar());
+
+// // const funcaoAutomovel = {
+// //   acelerar() {
+// //     return 'acelerou';
+// //   },
+// //   buzinar() {
+// //     return 'buzinou';
+// //   },
+// // };
+
+// // const moto = {
+// //   rodas: 2,
+// //   capacete: true,
+// // };
+
+// // Object.assign(moto, funcaoAutomovel, {
+// //   cor: 'azul',
+// //   motor: '250 km/h',
+// // });
+
+// const moto = {};
+// Object.defineProperties(moto, {
+//   rodas: {
+//     value: 2,
+//     configurable: false, // impede deletar e mudança de valor
+//     enumarable: true, // torna enumerável
+//   },
+//   capacete: {
+//     value: true,
+//     configurable: true,
+//     writable: false, // impede mudança de valor
+//   },
 // });
 
-// const carro = {
-//   rodas: 4,
-//   init(marca) {
-//     this.marca = marca;
-//     return this;
-//   },
-//   acelerar() {
-//     return `${this.marca} acelerou as ${this.rodas} rodas`;
-//   },
-//   buzinar() {
-//     return this.marca + ' buzinou';
-//   },
-// };
+// moto.rodas = 4;
+// delete moto.capacete;
+// moto;
+// // {rodas: 2}
 
-// const honda = Object.create(carro).init('Honda');
+// Object.getOwnPropertyDescriptors(Array);
+// // Lista com métodos e propriedades e Array
 
-// const ferrari = Object.create(carro).init('Ferrari');
-// console.log(ferrari.acelerar());
+// Object.getOwnPropertyDescriptors(Array.prototype);
+// // Lista com métodos e propriedades do protótipo de Array
 
-// const funcaoAutomovel = {
-//   acelerar() {
-//     return 'acelerou';
-//   },
-//   buzinar() {
-//     return 'buzinou';
-//   },
-// };
+// Object.getOwnPropertyDescriptor(window, 'innerHeight');
+// // Puxa de uma única propriedade
 
-// const moto = {
-//   rodas: 2,
-//   capacete: true,
-// };
+// Object.getOwnPropertyDescriptors(Array);
+// // Lista com métodos e propriedades e Array
 
-// Object.assign(moto, funcaoAutomovel, {
-//   cor: 'azul',
-//   motor: '250 km/h',
-// });
+// Object.getOwnPropertyDescriptors(Array.prototype);
+// // Lista com métodos e propriedades do protótipo de Array
 
-const moto = {};
-Object.defineProperties(moto, {
-  rodas: {
-    value: 2,
-    configurable: false, // impede deletar e mudança de valor
-    enumarable: true, // torna enumerável
-  },
-  capacete: {
-    value: true,
-    configurable: true,
-    writable: false, // impede mudança de valor
-  },
-});
+// Object.getOwnPropertyDescriptor(window, 'innerHeight');
+// // Puxa de uma única propriedade
 
-moto.rodas = 4;
-delete moto.capacete;
-moto;
-// {rodas: 2}
+const frutas = ['Banana', 'Uva'];
+frutas.toString(); // 'Banana,Uva'
+typeof frutas; // object
+Object.prototype.toString.call(frutas); // [object Array]
 
-Object.getOwnPropertyDescriptors(Array);
-// Lista com métodos e propriedades e Array
+const frase = 'Uma String';
+frase.toString(); // 'Uma String'
+typeof frase; // string
+Object.prototype.toString.call(frase); // [object String]
 
-Object.getOwnPropertyDescriptors(Array.prototype);
-// Lista com métodos e propriedades do protótipo de Array
+const carro = { marca: 'Ford' };
+carro.toString(); // [object Object]
+typeof carro; // object
+Object.prototype.toString.call(carro); // [object Object]
 
-Object.getOwnPropertyDescriptor(window, 'innerHeight');
-// Puxa de uma única propriedade
-
-Object.getOwnPropertyDescriptors(Array);
-// Lista com métodos e propriedades e Array
-
-Object.getOwnPropertyDescriptors(Array.prototype);
-// Lista com métodos e propriedades do protótipo de Array
-
-Object.getOwnPropertyDescriptor(window, 'innerHeight');
-// Puxa de uma única propriedade
+const li = document.querySelectorAll('li');
+typeof li; // object
+Object.prototype.toString.call(li); // [object NodeList]
