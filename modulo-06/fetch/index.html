@@ -3,10 +3,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fecth</title>
 </head>
+<style>
+  label {
+    display: block;
+  }
+
+  input {
+    display: block;
+    margin-top: 10px;
+  }
+</style>
 
 <body>
-  <div class="conteudo"></div>
-  <script src="script.js"></script>
+  <!-- <div class="conteudo"></div> -->
+
+  <form id="buscaCep">
+    <label for="cep">CEP:</label>
+    <input type="text" name="cep" id="cep">
+    <input type="button" id="btnCep" value="Buscar CEP">
+  </form>
+  <div id="resultado"></div>
+
+  <div>
+    <h2>Preco BTC</h2>
+    <div class="btc"></div>
+  </div>
+  <script src="exercicio.js"></script>
 </body>
 
 </html>
