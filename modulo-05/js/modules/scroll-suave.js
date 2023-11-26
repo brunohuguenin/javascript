@@ -13,7 +13,6 @@ export default function initScrollSuave() {
       behavior: 'smooth',
       block: 'start',
     });
-    console.log(section);
   };
 
   linksInternos.forEach((link) => {
