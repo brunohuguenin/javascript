@@ -27,6 +27,9 @@ input {
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .1);
 }
 
+#controles label {
+  margin-top: 20px;
+}
 .css {
   font-family: 'IBM Plex Mono', monospace;
   color: #333;
