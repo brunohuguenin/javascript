@@ -34,7 +34,7 @@ function fetchBTC() {
       );
     });
 }
-setInterval(fetchBTC, 100);
+// setInterval(fetchBTC, 100);
 fetchBTC();
 // Utilizando a API https://api.chucknorris.io/jokes/random
 // retorne uma piada randomica do chucknorris, toda vez que
