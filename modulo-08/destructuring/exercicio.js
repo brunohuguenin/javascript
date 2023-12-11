@@ -27,6 +27,6 @@ const cachorro = {
   cor: 'Amarelo',
 };
 
-const { cor = 'verde' } = cachorro;
+const { cor: bobCor } = cachorro;
 
 console.log(cor);
